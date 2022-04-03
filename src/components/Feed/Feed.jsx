@@ -5,7 +5,8 @@ import Reputation from "components/Reputation";
 import { Button, Typography } from "antd";
 import glStyles from "components/gstyles";
 import AddPost from "./components/AddPost";
-
+import LogoStk from "../../assets/deStackOverflow.png";
+import LogoOpenSorcerer from "../../assets/wizzie.png";
 const Feed = () => {
   const { selectedCategory } = useMoralisDapp();
   const [showAddPost, setShowAddPost] = useState(false);
@@ -46,14 +47,13 @@ const Feed = () => {
                     display: "inline-block",
                     verticalAlign: "middle",
                   }}
-                  src={
-                    "https://content.presspage.com/uploads/2658/c800_logo-stackoverflow-square.jpg?98978"
-                  }
+                  src= {LogoStk}
                   alt="Polytter"
-                  width="200"
-                  height="200"
+                  width="500"
+                  height="100"
                 />
               </p>
+              <br />
               <div
                 style={{
                   textAlign: "center",
@@ -75,7 +75,7 @@ const Feed = () => {
             <p style={{fontSize: "1.1rem"}}>Reputation system works on the basis of upvotes and downvotes.</p>
             </Paragraph>
             <Paragraph style={{textAlign: "center"}}> 
-            <p style={{fontSize: "1.1rem"}}>Currently works on Avalanche Testnet.</p>
+            <p style={{fontSize: "1.1rem"}}>Currently works on Polygon Testnet.</p>
             </Paragraph>
 
             <div style={{textAlign: "center"}}>
@@ -86,27 +86,32 @@ const Feed = () => {
                 >Choose the categories and start exploring!</p>
               </Title>
             </div>
-            <div style={{display: "flex"}}>
-            <img
+            <p
+                style={{
+                  display: "block",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  margin: "auto",
+                  width: "100%",
+                  fontFamily: "Poppins",
+                  textAlign: "center",
+                  backgroundColor: "#000000",
+                }}
+              >
+                <img
                   style={{
-                    //display: "inline-block",
+                    display: "inline-block",
                     verticalAlign: "middle",
-                    //zIndex: 1,
-                    position: "relative",
-                    top: "3.5rem",
-                    left: "4.5rem"
                   }}
-                  src={
-                    "https://cdn.sstatic.net/Img/product/teams/screens/illo-for-you.png?v=ab49238abe04"
-                  }
-                  alt="stack"
-                  width="550"
-                  height="300"
+                  src= {LogoOpenSorcerer}
+                  alt="OpenSorcerer"
+                  width="300"
+                  height="400"
                 />
-            </div>
-
-            <div style={{backgroundColor: "black", height: "100px", width: "700px"}}>
-            </div>
+              </p>
+              <h4 style={{ fontFamily: "Libre Baskerville", verticalAlign: "middle", }}>
+                  Open Sorcerer
+              </h4>
           </Typography>
         </div>
       </div>

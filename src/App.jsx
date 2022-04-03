@@ -11,6 +11,7 @@ import Chains from "components/Chains";
 import { Layout } from "antd";
 import "./style.css";
 import Main from "components/Main";
+import LogoStk from "./assets/deStackOverflow.png";
 const { Header } = Layout;
 
 const styles = {
@@ -84,12 +85,11 @@ const App = ({ isServerInfo }) => {
 
 export const Logo = () => (
   <div style={{display: "flex", alignItems: "center"}}>
-    <img height='30px' 
-    width='30px'
+    <img height='60px' 
+    width='220px'
     alt='overflowlogo' 
-    src='https://user-images.githubusercontent.com/81305824/149787348-2b8f1b69-5c2b-486d-8713-3fb2646895a9.png'
+    src={LogoStk}
     />
-    <h4 style={{marginLeft: "0.2rem", fontFamily: "Cormorant Garamond"}}>DeStack Overflow</h4>
   </div>
 );
 

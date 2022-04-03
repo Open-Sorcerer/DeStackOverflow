@@ -106,11 +106,11 @@ const Feed = () => {
                   src= {LogoOpenSorcerer}
                   alt="OpenSorcerer"
                   width="300"
-                  height="400"
+                  height="500"
                 />
               </p>
-              <h4 style={{ fontFamily: "Libre Baskerville", verticalAlign: "middle", }}>
-                  Open Sorcerer
+              <h4 style={{ fontFamily: "Libre Baskerville" }}>
+                  - Open Sorcerer &copy;
               </h4>
           </Typography>
         </div>

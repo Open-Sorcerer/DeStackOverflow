@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, Dropdown, Button, Modal } from "antd";
 import { DownOutlined } from "@ant-design/icons";
-import { AvaxLogo } from "./Logos";
+import { AvaxLogo, PolygonLogo } from "./Logos";
 import { useChain } from "react-moralis";
 
 const styles = {
@@ -22,9 +22,9 @@ const styles = {
 
 const menuItems = [
   {
-    key: "0xa869",
-    value: "Avalanche Testnet",
-    icon: <AvaxLogo />,
+    key: "0x13881",
+    value: "Mumbai",
+    icon: <PolygonLogo />,
   },
 ];
 
@@ -82,7 +82,7 @@ function Chains() {
         style={{ fontSize: "16px", fontWeight: "500" }}
         width="400px"
       >
-        Current Chain is not supported please switch to Avalanche
+        Current Chain is not supported please switch to Polygon
         <Button
           size="large"
           type="primary"
@@ -94,11 +94,11 @@ function Chains() {
             fontWeight: "500",
           }}
           onClick={() => {
-            switchNetwork("0xa869");
+            switchNetwork("0x13881");
             setIsModalVisible(false);
           }}
         >
-          Switch to Avalanche
+          Switch to Polygon
         </Button>
       </Modal>
     </div>

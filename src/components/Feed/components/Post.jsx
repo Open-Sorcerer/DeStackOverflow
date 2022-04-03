@@ -105,13 +105,13 @@ const Post = ({ post }) => {
         marginTop: "10px",
         marginBottom: "10px",
       }}
-      shape='round'
+      shape="round"
       onClick={toggleShowAddComment}
     >
       Reply
     </Button>,
 
-    <Tooltip key='comment-basic-like' title='Vote Up'>
+    <Tooltip key="comment-basic-like" title="Vote Up">
       <span
         style={{
           marginTop: "10px",
@@ -132,7 +132,7 @@ const Post = ({ post }) => {
     <span style={{ fontSize: "15px" }}>
       <Votes postId={postId} />
     </span>,
-    <Tooltip key='comment-basic-dislike' title='Dislike'>
+    <Tooltip key="comment-basic-dislike" title="Dislike">
       <span
         style={{
           marginTop: "10px",
@@ -170,30 +170,40 @@ const Post = ({ post }) => {
 
   const result = (
     <Comment
-      style={{ ...glStyles.card, padding: "0px 15px", marginBottom: "10px", boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", }}
+      style={{
+        ...glStyles.card,
+        padding: "0px 15px",
+        marginBottom: "10px",
+        boxShadow:
+          "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+      }}
       actions={actions}
       content={
         <>
-          <Text strong style={{ fontSize: "20px", color: "#333" }}>
-            {postContent["title"]}
-          </Text>
-          <p style={{ fontSize: "15px", color: "#111" }}>
-            {postContent["content"]}
-          </p>
-          {postContent["image"] !== undefined ? (
-            <img
-              src={postContent["image"]}
-              alt='img'
-              style={{
-                display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
-                width: "50%",
-              }}
-            />
-          ) : (
-            ""
-          )}
+          <div style={{ display: "flex" }}>
+            <div>
+              <Text strong style={{ fontSize: "20px", color: "#333" }}>
+                {postContent["title"]}
+              </Text>
+              <p style={{ fontSize: "15px", color: "#111" }}>
+                {postContent["content"]}
+              </p>
+            </div>
+            {postContent["image"] !== undefined ? (
+              <img
+                src={postContent["image"]}
+                alt="img"
+                style={{
+                  display: "block",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  width: "50%",
+                }}
+              />
+            ) : (
+              ""
+            )}
+          </div>
           <Divider style={{ margin: "15px 0" }} />
           <>{showAddComment ? <AddComment parentId={post.postId} /> : ""}</>
           <Donate postOwner={post.postOwner} postId={post.postId} />

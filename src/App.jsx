@@ -9,7 +9,6 @@ import {
 import Account from "components/Account";
 import Chains from "components/Chains";
 import { Layout } from "antd";
-import "antd/dist/antd.css";
 import "./style.css";
 import Main from "components/Main";
 const { Header } = Layout;
